@@ -25,9 +25,9 @@ export default function BookPage() {
         <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Book" }]} />
         <div className="container">
           <p className="eyebrow">Online Booking</p>
-          <h1>Book Your Appointment</h1>
+          <h1>Book Consultation</h1>
           <p>
-            Complete the guided funnel and our team confirms your appointment shortly.
+            Complete the guided booking form and our team confirms your appointment shortly.
           </p>
         </div>
       </section>

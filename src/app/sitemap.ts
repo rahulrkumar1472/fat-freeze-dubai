@@ -28,7 +28,7 @@ function routePriority(route: string): number {
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticRoutes = ["/", "/book"];
+  const staticRoutes = ["/", "/book", "/results-gallery"];
   const dynamicRoutes = ALL_PAGE_DATA.filter((page) => !page.canonicalSlug).map(
     (page) => `/${page.slug}`,
   );

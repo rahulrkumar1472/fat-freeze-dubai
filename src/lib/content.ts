@@ -323,7 +323,7 @@ const corePages: PageData[] = [
       },
     ],
     relatedLinks: [
-      { label: "Book your appointment", href: "/book" },
+      { label: "Book Consultation", href: "/book" },
       { label: "Fat Freezing Details", href: "/fat-freezing" },
       { label: "Read Reviews", href: "/reviews" },
     ],
@@ -342,7 +342,7 @@ const corePages: PageData[] = [
       {
         heading: "Direct Access",
         paragraphs: [
-          "For SEO consistency we keep pricing content under /prices.",
+          "Our full package guidance is available on the main prices page.",
           "You can continue directly to full pricing and booking from the links below.",
         ],
       },
@@ -350,7 +350,7 @@ const corePages: PageData[] = [
     faqs: [],
     relatedLinks: [
       { label: "View Full Prices", href: "/prices" },
-      { label: "Start Booking Funnel", href: "/book" },
+      { label: "Book Consultation", href: "/book" },
       { label: "Contact Team", href: "/contact" },
     ],
   },
@@ -402,7 +402,7 @@ const corePages: PageData[] = [
     title: "Fat Freezing Dubai | Doctor-Led Cryolipolysis Clinic",
     description:
       "Fat freezing in Dubai with doctor-led planning. Learn how cryolipolysis works, who it suits, results timeline, safety, and booking options.",
-    h1: "Fat Freezing in Dubai (Cryolipolysis)",
+    h1: "Fat Freezing in Dubai",
     subheading:
       "Our hero treatment for non-surgical fat reduction, built for localized stubborn fat zones.",
     heroImage: ASSETS_MAP.hero.src,
@@ -1088,7 +1088,7 @@ const locationPages: PageData[] = locationPageConfig.map((loc) => ({
     {
       question: "Can I book directly online?",
       answer:
-        "Yes, use the booking funnel to submit preferences and our team confirms your slot shortly.",
+        "Yes, submit your booking request online and our team confirms your slot shortly.",
     },
   ],
   relatedLinks: [

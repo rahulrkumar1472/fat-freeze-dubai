@@ -48,10 +48,9 @@ export const CONTACT = {
 };
 
 export const OFFERS = {
-  headline: "Sale ends soon",
+  headline: "Current package guidance",
   startsFromAed: 489,
-  packageDepositText: "Book now with an AED 30 deposit",
-  countdownTargetISO: "2026-03-31T23:59:59+04:00",
+  packageDepositText: "Final price is confirmed after consultation",
   priceDisclaimer:
     "Final treatment plan and price are confirmed only after medical consultation.",
 };
@@ -138,15 +137,6 @@ export const FOOTER_LINKS = {
     { label: "Sitemap", href: "/sitemap.xml" },
   ],
 };
-
-export const TRUST_BADGES = [
-  "63+ real reviews",
-  "Doctor-led",
-  "Non-invasive",
-  "No downtime",
-  "Clinically proven",
-  "Price match",
-];
 
 export const TRACKING_EVENTS = {
   bookNowClick: "book_now_click",

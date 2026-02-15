@@ -4,8 +4,7 @@ import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { JsonLd } from "@/components/shared/JsonLd";
 import { breadcrumbSchema, faqSchema } from "@/lib/seo";
 import type { PageData } from "@/lib/content";
-import { OFFERS } from "@/lib/site-config";
-import { CountdownTimer } from "@/components/ui/CountdownTimer";
+import { CLINIC, CONTACT, OFFERS } from "@/lib/site-config";
 
 type PageTemplateProps = {
   page: PageData;
@@ -32,14 +31,19 @@ export function PageTemplate({ page }: PageTemplateProps) {
         <div className="container">
           <p className="eyebrow">Dubai • Jumeirah 1 Clinic</p>
           <h1>{page.h1}</h1>
-          <p>{page.subheading}</p>
+          <p className="page-hero-copy">{page.subheading}</p>
           <div className="hero-actions">
             <Link href="/book" className="btn btn-primary">
-              Book your appointment
+              Book Consultation
             </Link>
-            <Link href="/prices" className="btn btn-secondary">
-              Packages from AED {OFFERS.startsFromAed}
-            </Link>
+            <a href={CONTACT.whatsappHref} className="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+              WhatsApp
+            </a>
+          </div>
+          <div className="page-hero-meta">
+            <span>{CLINIC.addressLine}</span>
+            <span>{CONTACT.phoneDisplay}</span>
+            {page.showFromPrice && <span>Packages from AED {OFFERS.startsFromAed}</span>}
           </div>
         </div>
       </section>
@@ -108,7 +112,7 @@ export function PageTemplate({ page }: PageTemplateProps) {
       )}
 
       <section className="container internal-links-section">
-        <h2>Continue Reading</h2>
+        <h2>Related Pages</h2>
         <div className="related-links-grid">
           {page.relatedLinks.map((link) => (
             <Link key={link.href} href={link.href} className="related-link-card">
@@ -118,14 +122,6 @@ export function PageTemplate({ page }: PageTemplateProps) {
         </div>
       </section>
 
-      <section className="countdown-section">
-        <div className="container">
-          <h2>{OFFERS.headline}</h2>
-          <p>Secure your consultation while current package rates are active.</p>
-          <CountdownTimer targetISO={OFFERS.countdownTargetISO} />
-          <p className="disclaimer">{OFFERS.priceDisclaimer}</p>
-        </div>
-      </section>
     </>
   );
 }

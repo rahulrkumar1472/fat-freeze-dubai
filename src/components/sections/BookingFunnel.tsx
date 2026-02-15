@@ -148,13 +148,11 @@ export function BookingFunnel() {
     <section className="booking-page container">
       <div className="booking-shell">
         <div className="booking-header">
-          <p className="eyebrow" style={{ color: "#a3f5de" }}>
-            Booking Funnel
-          </p>
-          <h1>Book Your Consultation</h1>
-          <p>Complete the 5-step flow and we will confirm your appointment shortly.</p>
+          <p className="eyebrow">Consultation Booking</p>
+          <h1>Book Consultation</h1>
+          <p>Complete the five-step request and our team will confirm your slot shortly.</p>
           <div className="step-progress" aria-label="Booking progress">
-            {["Treatment", "Body Area", "Date & Time", "Your Details", "Confirm"].map((label, index) => (
+            {["Treatment", "Area", "Date", "Details", "Confirm"].map((label, index) => (
               <span key={label} className={`step-pill ${step === index + 1 ? "active" : ""}`}>
                 {label}
               </span>
@@ -317,7 +315,7 @@ export function BookingFunnel() {
 
           {step === 5 && (
             <div className="booking-summary">
-              <h2>Step 5: Confirm and Submit</h2>
+              <h2>Step 5: Confirm Request</h2>
               <p>Review your booking request before sending it to our Jumeirah 1 team.</p>
               <dl>
                 <div>
@@ -384,7 +382,7 @@ export function BookingFunnel() {
             )}
             {step === 5 && (
               <button type="button" className="btn btn-primary" onClick={submit} disabled={submitting}>
-                {submitting ? "Submitting..." : "Submit Booking"}
+                {submitting ? "Submitting..." : "Submit Request"}
               </button>
             )}
           </div>
